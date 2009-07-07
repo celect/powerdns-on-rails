@@ -2,6 +2,8 @@
   %td
     = link_to domain.name, domain_path( domain )
   %td &nbsp;
+  %td 
+    %p= domain.soa_record.updated_at
   %td
     = link_to prototip_info_icon('table_edit.png', 'zone-edit'), edit_domain_path(domain)
     = link_to prototip_info_icon('report_magnify.png', 'audits'), audits_path(:action => :domain, :id => domain)
